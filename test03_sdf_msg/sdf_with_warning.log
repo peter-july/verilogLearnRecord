@@ -1,0 +1,90 @@
+[2023-07-27 05:53:19 UTC] vcs -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' design.sv testbench.sv  && ./simv +vcs+lic+wait  
+
+Warning-[LINX_KRNL] Unsupported Linux kernel
+  Linux kernel '5.4.0-153-generic' is not supported.
+  Supported versions are 2.4* or 2.6*.
+
+                         Chronologic VCS (TM)
+            Version S-2021.09 -- Thu Jul 27 01:53:20 2023
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'design.sv'
+Parsing design file 'testbench.sv'
+Top Level Modules:
+       test
+TimeScale is 1 ns / 1 ns
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "test.sdf"
+   ***    Annotation scope: test
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+typdelays compiled, TYPICAL delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Thu Jul 27 01:53:20 2023
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_CFTC] Cannot find timing check 
+test.sdf, 9
+module: DUT, "instance: test.inst1"
+  SDF Warning: Cannot find timing check $hold(B,A,...)
+      
+
+
+          Total errors: 0
+          Total warnings: 1
+   ***    SDF annotation completed: Thu Jul 27 01:53:20 2023
+
+
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module test
+recompiling module DUT
+Both modules done.
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/vcsmx/vcs/S-2021.09/linux/lib -L/apps/vcsmx/vcs/S-2021.09/linux/lib  -Wl,-rpath-link=./ -Wl,--no-as-needed   objs/amcQw_d.o   _322_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_save_restore_new.o /apps/vcsmx/vcs/S-2021.09/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .221 seconds to compile + .238 seconds to elab + .271 seconds to link
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09; Runtime version S-2021.09;  Jul 27 01:53 2023
+Doing SDF annotation ...... Done
+
+"testbench.sv", 31: Timing violation in test.inst1
+    $setup( A:10, B:20, limit: 21 );
+
+
+"testbench.sv", 31: Timing violation in test.inst1
+    $setup( A:30, B:40, limit: 21 );
+
+$finish called from file "testbench.sv", line 22.
+$finish at simulation time                   44
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 44 ns
+CPU Time:      0.500 seconds;       Data structure size:   0.0Mb
+Thu Jul 27 01:53:22 2023
+Done
