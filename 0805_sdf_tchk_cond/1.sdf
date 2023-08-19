@@ -1,0 +1,14 @@
+(DELAYFILE                   // Header Section
+    (SDFVERSION "3.0")
+    (DIVIDER /)
+    (TIMESCALE 1ns)
+
+    (CELL                       // Cell 1
+        (CELLTYPE "test")
+        (INSTANCE tb/inst)
+        (TIMINGCHECK
+            (SETUP (negedge E) (COND TE == 1'b0 (posedge CK)) (0.035::0.035))
+            (SETUP (negedge TE) (COND E == 1'b0 (posedge CK)) (0.036::0.036))
+        )
+    )
+)

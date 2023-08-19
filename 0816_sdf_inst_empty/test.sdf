@@ -1,0 +1,11 @@
+(DELAYFILE                   // Header Section
+    (SDFVERSION "3.0")
+
+    (CELL                       // Cell 1
+        (CELLTYPE "DUT")
+        (INSTANCE )
+        (TIMINGCHECK
+            (SETUP in out (21))
+        )
+    )
+)
