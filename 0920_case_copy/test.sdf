@@ -1,0 +1,48 @@
+(DELAYFILE                   // Header Section
+    (SDFVERSION "3.0")
+    (DESIGN "test")
+    (DATE "March 12, 1995 09:46")
+    (VENDOR "Southwestern ASIC")
+    (PROGRAM "Fast program")
+    (VERSION "v1.0")
+    (DIVIDER /)
+
+    (VOLTAGE 0.8000::0.8000)
+    (PROCESS "1.0000::1.0000")
+    (TEMPERATURE 25.0000::25.0000)
+    (TIMESCALE 1 ns)
+
+    (CELL                       // Cell 1
+        (CELLTYPE "S")
+        (INSTANCE dut)
+        (TIMINGCHECK
+            (SETUPHOLD (posedge D) (negedge CKN) (0.0238)(0.0072))
+            (SETUPHOLD (negedge D) (negedge CKN) (0.0391)(-0.0224))
+            (SETUPHOLD (posedge SI) (negedge CKN) (0.0236)(0.0119))
+            (SETUPHOLD (negedge SI) (negedge CKN) (0.0405)(-0.0210))
+            (SETUPHOLD (posedge SE) (negedge CKN) (0.0432)(0.0147))
+            (SETUPHOLD (negedge SE) (negedge CKN) (0.0321)(0.0062))
+
+            (RECREM (posedge RDN) (negedge CKN) (-0.0467)(0.0576))
+
+            (SETUPHOLD (posedge D) (COND a0 (negedge CKN)) (0.0248)(0.0072))
+            (SETUPHOLD (negedge D) (COND a0 (negedge CKN)) (0.0391)(-0.0224))
+            (SETUPHOLD (posedge D) (COND a1 (negedge CKN)) (0.0248)(0.0072))
+            (SETUPHOLD (negedge D) (COND a1 (negedge CKN)) (0.0391)(-0.0224))
+            (SETUPHOLD (posedge SI) (COND a4 (negedge CKN)) (0.0236)(0.0093))
+            (SETUPHOLD (negedge SI) (COND a4 (negedge CKN)) (0.0409)(-0.0210))
+
+            (SETUPHOLD (posedge SI) (COND a5 (negedge CKN)) (0.0236)(0.0119))
+            (SETUPHOLD (negedge SI) (COND a5 (negedge CKN)) (0.0384)(-0.0210))
+            (SETUPHOLD (posedge SE) (COND a3 (negedge CKN)) (0.0432)(-0.0256))
+            (SETUPHOLD (negedge SE) (COND a3 (negedge CKN)) (0.0252)(0.0062))
+            (SETUPHOLD (posedge SE) (COND a2 (negedge CKN)) (0.0165)(0.0147))
+            (SETUPHOLD (negedge SE) (COND a2 (negedge CKN)) (0.0321)(-0.0149))
+
+            (RECREM (posedge RDN) (COND a6 (negedge CKN)) (-0.0467)(0.0576))
+            (RECREM (posedge RDN) (COND a7 (negedge CKN)) (-0.0467)(0.0576))
+            (RECREM (posedge RDN) (COND a8 (negedge CKN)) (-0.0467)(0.0576))
+            (RECREM (posedge RDN) (COND a9 (negedge CKN)) (-0.0467)(0.0576))
+        )
+    )
+)
