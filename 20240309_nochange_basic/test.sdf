@@ -1,0 +1,12 @@
+(DELAYFILE                   
+    (SDFVERSION "3.0")
+    (TIMESCALE 1 ns)
+
+    (CELL                     
+        (CELLTYPE "dut")
+        (INSTANCE inst1)
+        (TIMINGCHECK
+            (SKEW d clk (-21))
+        )
+    )
+)
