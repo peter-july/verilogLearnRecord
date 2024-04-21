@@ -1,0 +1,13 @@
+(DELAYFILE                   // Header Section
+    (SDFVERSION "3.0")
+    (TIMESCALE 1 ns)
+    (CELL                       // Cell 1
+        (CELLTYPE "test")
+        (INSTANCE test)
+        (DELAY
+            (ABSOLUTE
+                (INTERCONNECT io I0.io (10))
+            )
+        )
+    )
+)
