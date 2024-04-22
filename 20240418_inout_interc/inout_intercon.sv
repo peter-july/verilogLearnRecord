@@ -2,21 +2,11 @@
 module test;
     reg in;
     wire io;
-    assign io = in;
+    buf (io, 1'b0);
     SUB I0(io);
+
     initial begin
         $sdf_annotate("test.sdf");
-    end
-    initial begin
-        // in = 0;
-        #100;
-        in = 1;
-        #100;
-        in = 1'bz;
-        #100;
-        in = 1'bx;
-        #100;
-        $finish;
     end
     always @(io) begin
         $display($realtime, " io=%b", io);
@@ -34,10 +24,17 @@ endmodule
 
 module BUF(io);
     inout io;
-    wire b;
-    buf(io, b);
-    assign #5 b = 1'b1;
-
+    reg in;
+    assign io = in;
+    initial begin
+        in = 0;
+        #100;
+        in = 1;
+        // #100;
+        // in = 1'bz;
+        // #100;
+        // in = 1'bx;
+    end
     always @(io) begin
         $display($realtime, "test.I0.I0.io=%b", io);
     end
