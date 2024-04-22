@@ -1,0 +1,27 @@
+test1.sdf, only down hierarchy delay(10)
+0    io=0;
+10   test.I0.io=0;
+10   test.I0.I0.io=0;
+100  io=x;
+110  test.I0.io=x;
+110  test.I0.I0.io=x;
+
+
+test2.sdf, only up hierarchy delay(20)
+0    io=0;
+0    test.I0.io=0;
+0    test.I0.I0.io=0;
+100  io=x;
+100  test.I0.io=x;
+100  test.I0.I0.io=x;
+
+
+test3.sdf, both down,up delay
+0    io=0;
+10   test.I0.io=0;
+10   test.I0.I0.io=0;
+100  io=x;
+110  test.I0.io=x;
+110  test.I0.I0.io=x;
+
+C tool只做了down hierarchy delay
