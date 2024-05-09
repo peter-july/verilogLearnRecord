@@ -1,0 +1,20 @@
+// a tool
+0 in = x, sub.in = x, sub.a = x, sub.out = x, out = x
+10 in = 1, sub.in = x, sub.a = x, sub.out = x, out = x
+15 in = 1, sub.in = 1, sub.a = 1, sub.out = 1, out = 1
+20 in = 0, sub.in = 1, sub.a = 1, sub.out = 1, out = 1
+25 in = 0, sub.in = 0, sub.a = 0, sub.out = 0, out = 0
+
+// b tool
+// 当in上有tran时，不做delay
+Ignoring interconnect delay on port test.inst.sub.in[0] because the port is connected with the tran terminal.
+0 in = x, sub.in = x, sub.a = x, sub.out = x, out = x
+10 in = 1, sub.in = 1, sub.a = 1, sub.out = 1, out = 1
+20 in = 0, sub.in = 0, sub.a = 0, sub.out = 0, out = 0
+
+// c tool
+# 0 in = x, sub.in = x, sub.a = x, sub.out = x, out = x
+# 10 in = 1, sub.in = x, sub.a = 1, sub.out = x, out = x
+# 15 in = 1, sub.in = 1, sub.a = 1, sub.out = 1, out = 1
+# 20 in = 0, sub.in = 1, sub.a = 0, sub.out = 1, out = 1
+# 25 in = 0, sub.in = 0, sub.a = 0, sub.out = 0, out = 0

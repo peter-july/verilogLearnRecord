@@ -1,0 +1,24 @@
+// a tool
+Warning-[SDFCOM_UHICD] Up-hierarchy Interconnect Delay ignored
+test.sdf, 9
+module: LEAF, "instance: test.sub.leaf"
+  SDF Warning: INTERCONNECT Delay to up-hierarchy destination 
+  accInput/accInout is ignored, DEVICE Delay on port 'io' applied.
+  Up-hierarchy interconnect delay arises when the load is hierarchically above
+  the source.
+0 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+5 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+105 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+
+// b tool
+0 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=0
+5 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+100 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=x
+105 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+
+// c tool
+ ** Warning: (vsim-SDF-3438) test.sdf(9): Annotating cell drivers of INTERCONNECT source port.
+ ** Warning: (vsim-SDF-3257) test.sdf(9): Failed to find cell drivers of INTERCONNECT source port.
+# 0 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+# 100 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+

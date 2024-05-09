@@ -1,0 +1,21 @@
+// a tool
+0 in = x, sub.in = x, sub.a = z, sub.out = x, out = x
+10 in = 1, sub.in = x, sub.a = z, sub.out = x, out = x
+15 in = 1, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+20 in = 0, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+25 in = 0, sub.in = 0, sub.a = z, sub.out = 0, out = 0
+
+// b tool
+0 in = x, sub.in = x, sub.a = z, sub.out = x, out = x
+10 in = 1, sub.in = x, sub.a = z, sub.out = x, out = x
+15 in = 1, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+20 in = 0, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+25 in = 0, sub.in = 0, sub.a = z, sub.out = 0, out = 0
+
+// c tool
+# 0 in = x, sub.in = x, sub.a = z, sub.out = x, out = x
+# 10 in = 1, sub.in = x, sub.a = z, sub.out = x, out = x
+# 15 in = 1, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+# 20 in = 0, sub.in = 1, sub.a = z, sub.out = 1, out = 1
+# 25 in = 0, sub.in = 0, sub.a = z, sub.out = 0, out = 0
+

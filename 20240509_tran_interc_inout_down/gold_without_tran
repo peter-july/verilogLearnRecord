@@ -1,0 +1,18 @@
+// a tool
+0 io=0, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+5 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+100 io=x, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+105 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+
+// b tool
+0 io=0, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+5 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+100 io=x, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+105 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+
+// c tool
+# 0 io=0, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+# 5 io=0, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+# 100 io=x, test.sub.io=0, test.sub.a=z, test.sub.leaf.io=0
+# 105 io=x, test.sub.io=x, test.sub.a=z, test.sub.leaf.io=x
+

@@ -1,0 +1,13 @@
+(DELAYFILE                   // Header Section
+    (SDFVERSION "3.0")
+    (TIMESCALE 1 ns)
+    (CELL                       // Cell 1
+        (CELLTYPE "SUB")
+        (INSTANCE sub)
+        (DELAY
+            (ABSOLUTE
+                (INTERCONNECT leaf.io io (5))
+            )
+        )
+    )
+)
