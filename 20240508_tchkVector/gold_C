@@ -1,0 +1,6 @@
+ ** Error: $setup( posedge d:10 ps, posedge clk:15 ps, 10 ps );
+    Time: 15 ps  Iteration: 1  Process: /test/inst/#Setup# File: testbench.sv Line: 22
+ ** Error: $setup( d:10 ps, clk:15 ps, 10 ps );
+    Time: 15 ps  Iteration: 1  Process: /test/inst/#Setup# File: testbench.sv Line: 21
+ ** Error: $setup( negedge d:10 ps, negedge clk:15 ps, 10 ps );
+    Time: 15 ps  Iteration: 1  Process: /test/inst/#Setup# File: testbench.sv Line: 23

@@ -1,0 +1,89 @@
+Warning!  Timing violation
+           $setup( d[0]:10 PS, clk[0]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[1]:10 PS, clk[0]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[2]:10 PS, clk[0]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[0]:10 PS, clk[1]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[1]:10 PS, clk[1]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[2]:10 PS, clk[1]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[0]:10 PS, clk[2]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[1]:10 PS, clk[2]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( d[2]:10 PS, clk[2]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 21
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( posedge d[0]:10 PS, posedge clk[1]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 22
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( posedge d[1]:10 PS, posedge clk[1]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 22
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( negedge d[2]:10 PS, negedge clk[0]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 23
+           Scope: test.inst
+            Time: 15 PS
+
+
+Warning!  Timing violation
+           $setup( negedge d[2]:10 PS, negedge clk[2]:15 PS,  10 : 10 PS );
+            File: ./testbench.sv, line = 23
+           Scope: test.inst
+            Time: 15 PS

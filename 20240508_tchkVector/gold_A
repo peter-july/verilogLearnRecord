@@ -1,0 +1,8 @@
+"testbench.sv", 21: Timing violation in test.inst
+    $setup( d:10, clk:15, limit: 10 );
+
+"testbench.sv", 22: Timing violation in test.inst
+    $setup( posedge d:10, posedge clk:15, limit: 10 );
+
+"testbench.sv", 23: Timing violation in test.inst
+    $setup( negedge d:10, negedge clk:15, limit: 10 );
