@@ -17,7 +17,7 @@ module dut(in, out);
     input in;
     output out;
     wire a;
-    // tran(out, a);
+    tran(out, a);
 
     sub sub(in, out);
     initial begin

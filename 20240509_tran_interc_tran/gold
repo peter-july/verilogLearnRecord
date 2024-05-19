@@ -1,0 +1,14 @@
+// a tool
+0 io=0, sub.io=0, sub.leaf.io=0
+100 io=x, sub.io=x, sub.leaf.io=x
+
+// b tool
+Ignoring interconnect delay on port test.sub.io[0] because the port is connected with the tran terminal.
+0 io=0, sub.io=0, sub.leaf.io=0
+100 io=x, sub.io=x, sub.leaf.io=x
+
+// c tool
+# 0 io=0, sub.io=x, sub.leaf.io=x
+# 5 io=0, sub.io=0, sub.leaf.io=0
+# 100 io=x, sub.io=0, sub.leaf.io=0
+# 105 io=x, sub.io=x, sub.leaf.io=x
